@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quabong</title>
+</head>
+<body>
+<form>
+    <img id="quabong" src="https://thuviendohoa.vn/upload/images/items/hinh-anh-trai-bong-da-png-452.webp" style="width: 30%">
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click me" onclick="moverRight()"/>
+</form>
+<script>
+    let imObj = null;
+    imObj = document.getElementById('quabong');
+    function innit() {
+        imObj = document.getElementById('quabong');
+        imObj.style.position = 'relative';
+        imObj.style.left = '100px';
+    }
+    function moverRight(){
+        imObj.style.left = parseInt(imObj.style.left) + 10 + 'px';
+    }
+    window.onload = innit();
+</script>
+</body>
+</html>
